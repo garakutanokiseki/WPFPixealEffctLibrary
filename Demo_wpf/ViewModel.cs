@@ -11,6 +11,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Interop;
 using System.IO;
 using System.Windows.Media;
+using System.Diagnostics;
 
 namespace ExtensibleDemoApp
 {
@@ -246,8 +247,11 @@ namespace ExtensibleDemoApp
         {
             get
             {
+                Debug.WriteLine("EffectsList::get >>");
                 if (_effects == null)
                 {
+                    Debug.WriteLine("EffectsList::get init >>");
+
                     _effects = new List<EffectViewItem>();
                     _effects.Add(new EffectViewItem(new ShaderEffectLibrary.BandedSwirlEffect()));
                     _effects.Add(new EffectViewItem(new ShaderEffectLibrary.BloomEffect()));
@@ -273,7 +277,9 @@ namespace ExtensibleDemoApp
                     _effects.Add(new EffectViewItem(new ShaderEffectLibrary.ToonShaderEffect()));
                     _effects.Add(new EffectViewItem(new ShaderEffectLibrary.ZoomBlurEffect()));
 
+                    Debug.WriteLine("EffectsList::get init<<");
                 }
+                Debug.WriteLine("EffectsList::get <<");
                 return _effects;
             }
 

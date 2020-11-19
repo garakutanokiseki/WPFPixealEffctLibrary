@@ -29,6 +29,31 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="ShaderSource\BandedSwirl.ps" />
+    <None Remove="ShaderSource\Bloom.ps" />
+    <None Remove="ShaderSource\BrightExtract.ps" />
+    <None Remove="ShaderSource\ColorKeyAlpha.ps" />
+    <None Remove="ShaderSource\ColorTone.ps" />
+    <None Remove="ShaderSource\ContrastAdjust.ps" />
+    <None Remove="ShaderSource\DirectionalBlur.ps" />
+    <None Remove="ShaderSource\Embossed.ps" />
+    <None Remove="ShaderSource\Gloom.ps" />
+    <None Remove="ShaderSource\GrowablePoissonDisk.ps" />
+    <None Remove="ShaderSource\InvertColor.ps" />
+    <None Remove="ShaderSource\LightStreak.ps" />
+    <None Remove="ShaderSource\Magnify.ps" />
+    <None Remove="ShaderSource\Monochrome.ps" />
+    <None Remove="ShaderSource\Pinch.ps" />
+    <None Remove="ShaderSource\Pixelate.ps" />
+    <None Remove="ShaderSource\Ripple.ps" />
+    <None Remove="ShaderSource\Sharpen.ps" />
+    <None Remove="ShaderSource\SmoothMagnify.ps" />
+    <None Remove="ShaderSource\Swirl.ps" />
+    <None Remove="ShaderSource\ToneMapping.ps" />
+    <None Remove="ShaderSource\ToonShader.ps" />
+    <None Remove="ShaderSource\ZoomBlur.ps" />
+  </ItemGroup>
+  <ItemGroup>
     <Reference Update="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
@@ -76,6 +101,31 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="System.Data.DataSetExtensions" Version="4.5.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ShaderSource\BandedSwirl.ps" />
+    <Resource Include="ShaderSource\Bloom.ps" />
+    <Resource Include="ShaderSource\BrightExtract.ps" />
+    <Resource Include="ShaderSource\ColorKeyAlpha.ps" />
+    <Resource Include="ShaderSource\ColorTone.ps" />
+    <Resource Include="ShaderSource\ContrastAdjust.ps" />
+    <Resource Include="ShaderSource\DirectionalBlur.ps" />
+    <Resource Include="ShaderSource\Embossed.ps" />
+    <Resource Include="ShaderSource\Gloom.ps" />
+    <Resource Include="ShaderSource\GrowablePoissonDisk.ps" />
+    <Resource Include="ShaderSource\InvertColor.ps" />
+    <Resource Include="ShaderSource\LightStreak.ps" />
+    <Resource Include="ShaderSource\Magnify.ps" />
+    <Resource Include="ShaderSource\Monochrome.ps" />
+    <Resource Include="ShaderSource\Pinch.ps" />
+    <Resource Include="ShaderSource\Pixelate.ps" />
+    <Resource Include="ShaderSource\Ripple.ps" />
+    <Resource Include="ShaderSource\Sharpen.ps" />
+    <Resource Include="ShaderSource\SmoothMagnify.ps" />
+    <Resource Include="ShaderSource\Swirl.ps" />
+    <Resource Include="ShaderSource\ToneMapping.ps" />
+    <Resource Include="ShaderSource\ToonShader.ps" />
+    <Resource Include="ShaderSource\ZoomBlur.ps" />
   </ItemGroup>
   <Target Name="EffectCompile" Condition="'@(Effect)' != '' ">
     <PixelShaderCompile Sources="@(Effect)">
