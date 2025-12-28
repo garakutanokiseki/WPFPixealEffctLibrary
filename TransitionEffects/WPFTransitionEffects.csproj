@@ -1,7 +1,7 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <UsingTask TaskName="ShaderBuildTask.PixelShaderCompile" AssemblyName="ShaderBuildTask, Version=1.0.3072.18169, Culture=neutral, PublicKeyToken=44e467d1687af125" />
   <PropertyGroup>
-    <TargetFramework>net5.0-windows</TargetFramework>
+    <TargetFrameworks>net46;net6.0-windows;net8.0-windows;net9.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
     <OutputType>Library</OutputType>
     <RootNamespace>TransitionEffects</RootNamespace>
@@ -68,6 +68,7 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
   </ItemGroup>
+  <!--
   <ItemGroup>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
     <Effect Include="ShaderSource\BandedSwirlTransitionEffect.fx" />
@@ -101,6 +102,7 @@
     <Effect Include="ShaderSource\WaterTransitionEffect.fx" />
     <Effect Include="ShaderSource\WaveTransitionEffect.fx" />
   </ItemGroup>
+  -->
   <ItemGroup>
     <Resource Include="Images\clouds.png" />
     <Resource Include="Images\noise.png" />
